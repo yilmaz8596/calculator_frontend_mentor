@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+:root {
+  --background-color-1: #445069;
+  --background-color-2: #ede9d5;
+  --background-color-3: #18031f;
+  --slider-color: #1a2438;
+  --display-screen-color: #161d2e;
+  --calculator-color: #1d273e;
+  --button-color-1: #ddd1d1;
+  --button-text-color: #494545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background-color: var(--background-color-1);
+}
+
+.top-container {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.top-container--two {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.theme-slider--main__container {
+  width: fit-content;
+  margin-top: -1rem;
+}
+
+.theme-slider--container {
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: var(--slider-color);
+  position: relative;
+}
+
+.theme-slider--original {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: #f6635c;
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.theme-nums--container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3px;
+}
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle-container {
+  width: 400px;
+  height: 90px;
+  border-radius: 10px;
+  background-color: var(--display-screen-color);
+  position: relative;
+}
+
+.middle-container--display {
+  position: absolute;
+  right: 1rem;
+  top: 30%;
+  color: white;
+}
+
+.bottom-container {
+  width: 400px;
+  height: 400px;
+  background-color: var(--calculator-color);
+  border-radius: 10px;
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-main--container {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+button {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--button-color-1);
+  border: none;
+  box-shadow: 0 2px #888888;
+  margin-left: 5px;
+  color: var(--button-text-color);
+  font-size: 24px;
+  transition: transform 0.1s;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.reset,
+.equal {
+  width: 170px;
+}
+
+.equal {
+  background-color: #f6635c;
+}
+
+.reset,
+.del {
+  background-color: #94add7;
+}
+
+.button-group--one,
+.button-group--two,
+.button-group--three,
+.button-group--four {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  color: white;
+}
+
+.text-one {
+  font-size: 24px;
+}
+.text-two {
+  font-size: 10px;
+}
+
+.slider-nums--one,
+.slider-nums--two,
+.slider-nums--three {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .top-container {
+    width: 300px;
+    height: 20px;
+  }
+
+  .theme-slider--container {
+    width: 40px;
+    height: 10px;
+  }
+
+  .theme-slider--original {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    top: 2.3px;
+    left: 6px;
+  }
+
+  .middle-container {
+    width: 300px;
+    height: 60px;
+  }
+
+  .bottom-container {
+    width: 300px;
+  }
+
+  button {
+    width: 60px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .reset,
+  .equal {
+    width: 130px;
+  }
+
+  .text-one {
+    font-size: 18px;
+  }
+
+  .text-two {
+    font-size: 6px;
+  }
+}
